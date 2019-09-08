@@ -1,0 +1,913 @@
+//fonts
+
+    @font-face {
+        font-family: 'raleway-regular';
+        src: url('../fonts/raleway/Raleway-Regular.ttf');
+    }
+
+    @font-face {
+        font-family: 'raleway-bold';
+        font-weight: bold;
+        src: url('../fonts/raleway/Raleway-Bold.ttf');
+    }
+
+//media queries
+
+    @mixin contact-icon-correction {
+
+        @media only screen and (max-width: 768px) {
+                margin: 0 0 40px 0;
+        }
+
+    }
+
+    @mixin contact-info-correction {
+
+        @media only screen and (max-width: 768px) {
+            font-size: 40px;
+            text-align: center;
+            width: 100%;
+        }
+
+    }
+
+    @mixin mobile-responsive {
+
+        @media only screen and (max-width: 768px) {
+
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 0;
+        }
+
+    }
+
+    @mixin header-spacing-correction {
+        @media only screen and (max-width: 768px) {
+            margin-bottom: 10px;
+        }
+    }
+
+//color palette
+
+    @mixin bg-bar {
+
+        background-color: #22252c;
+
+    }
+
+    @mixin footer-txt-color {
+
+        color: #e14658;
+        font-size: 22px;
+        text-shadow: 1px 1px 1px #000;
+
+    }
+
+    @mixin skill-box-color {
+        background-color: rgba(192, 179, 160, 1);
+        border: 1px solid rgba(0, 0, 0, .1);
+        padding: 50px 0;
+    }
+
+    @mixin svg-color {
+
+        fill: #e14658;
+        filter: drop-shadow(1px 1px 1px #000);
+
+    }
+
+//spacing, margins, padding
+  
+    @mixin contact-align {
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+
+    }
+
+    @mixin footer-row-hght {
+
+        grid-template-rows: 1fr;
+
+    }
+
+    @mixin work-implement {
+        height: 100px;
+        padding: 25px 50px;
+        width: auto;
+
+        @media only screen and (max-width: 768px) {
+
+            padding: 25px;
+        }
+
+    }
+
+    @mixin logo-padding {
+        align-self: center;
+        height: auto;
+        justify-self: center;
+        padding: 20px 0;
+        width: 100px;
+    }
+
+    @mixin skill-section-header-align {
+
+        background-color: rgba(34, 37, 44, .75);
+        border-left: 1px solid rgba(0, 0, 0, .1);
+        border-right: 1px solid rgba(0, 0, 0, .1);
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        display: flex;
+        justify-content: center;
+        margin: 0 200px;
+
+    }
+
+    @mixin section-header {
+
+        color: #e14658;
+        font-size: 32px;
+        padding: 20px 0;
+
+    }
+
+    @mixin zero-space {
+        
+        margin: 0;
+        padding: 0;
+
+    }
+
+body {
+
+    @include zero-space;
+
+    background-color: #3f3250;
+    font-family: 'raleway-regular';
+
+    a {
+
+        text-decoration: none;
+    
+    }
+
+}
+
+.navbar {
+
+    @include zero-space;
+    @include bg-bar;
+
+    align-content: center;
+    
+    border-bottom-color: rgba(194, 194, 194, .25);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-top-color: rgba(194, 194, 194, .25);
+    border-top-style: solid;
+    border-top-width: 1px;
+    display: flex;
+    height: 80px;
+
+        @media only screen and (max-width: 768px) {
+            border-top-style: none;
+            height: 200px;
+        }
+
+    justify-content: center;
+    overflow: none;
+    z-index: 1;
+
+    .sandwich-container {
+
+        display: none;
+
+        @media only screen and (max-width: 768px) {
+            left: 40px;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+        }
+
+    }
+
+    .nav-logo {
+
+      height: 100%;
+    
+    }
+
+    ul {
+
+        @include zero-space;
+
+        align-items: center;
+        display: flex;
+        height: 80px;
+        justify-content: center;
+        justify-items: center;
+
+            @media only screen and (max-width: 768px) {
+                
+                height: 200px;
+                padding-top: 15px;
+
+            }   
+
+    }
+
+    .nav-li {
+
+        color: #e14658;
+        font-size: 28px;
+        list-style: none;
+        margin-left: 40px;
+        margin-right: 40px;
+
+            @media only screen and (max-width: 768px) {
+                color: #e14658;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0 20px 12px;
+                text-align: center;
+            }
+
+        a {
+
+            color: #e14658;
+
+        }
+
+        a:hover {
+            font-size: 30px;
+        }
+
+    }
+
+    #logo-container {
+        height: 40px;
+
+            @media only screen and (max-width: 768px) {
+                display: none;
+            }
+    }
+}
+
+
+
+/* /////////// FOR STICKY NAV \\\\\\\\\\\ (is applied to nav by modifyStickyClass() function in main.js) */
+
+    .collapsible-menu {
+
+        @media only screen and (max-width: 768px) {
+
+            background-color: #e14658;
+            height: 280px !important;
+            left: 0;
+            position: absolute;
+            top: 75px;
+
+            .nav-li {
+                font-size: 48px;
+
+                :hover {
+                    font-size: 48px !important;
+                }
+
+            }
+
+        }
+
+    }
+
+    .sticky-nav {
+
+        position: fixed;
+        top: 0;
+        width: 100%;
+
+        @media only screen and (max-width: 768px) {
+
+            height: 75px;
+
+        }
+
+    }
+
+    .sticky-padding {
+
+        padding-top: 120px;
+
+    }
+
+/* ///////// FOR MOBILE COLLAPSE MENU \\\\\\\\\ (is applied to menu by EventListener in main.js) */
+
+    .menu-invisible {
+
+        @media only screen and (max-width: 768px) {
+
+            display: none !important;
+
+        }
+
+    }
+
+    .sandwich-path,
+    .sandwich-svg {
+
+        pointer-events: none;
+
+    }
+
+    .sandwich-visible {
+
+        @media only screen and (max-width: 768px) {
+            display: block !important;
+
+        }
+
+    }
+
+    .sticky-menu {
+
+        color: #22252c !important;
+
+    }
+
+.hero-img-container {
+
+    background-color: #e14658;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: calc(100vh - 79px);
+
+        @media only screen and (max-width: 768px) {
+            height: calc(100vh - 200px);
+        }
+
+    justify-content: center;
+    position: relative;
+
+    .hero-img {
+
+        bottom: 0;
+        display: block;
+        margin: auto;
+        margin-bottom: 0;
+        max-width: 1000px;
+        min-width: 400px;
+
+        @media only screen and (max-height: 600px) {
+            display: none;
+        }
+        
+    }
+
+    .main-header {
+        color: #22252c;
+        display: flex;
+        font-size: 102px;
+
+            @media only screen and (max-width: 768px) {
+                font-size: 62px;
+            }
+
+        justify-content: center;
+        margin-bottom: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .main-sub-header {
+        color: #22252c;
+        display: flex;
+        font-size: 20px;
+
+            @media only screen and (max-width: 768px) {
+                font-size: 32px;
+            }
+
+        justify-content: center;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+}
+
+.content-container {
+
+    .skills-grid {
+
+        margin: auto;
+
+        .framework-header-container {
+
+            @include mobile-responsive;
+            @include skill-section-header-align;
+
+            .framework-header {
+
+                @include zero-space;
+                @include section-header;
+                
+            }
+            
+        }
+
+        .framework-sub-grid {
+            
+            @include header-spacing-correction;
+            @include mobile-responsive;
+            @include skill-box-color;
+
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            height: auto;
+            margin: 0 200px 50px;
+            
+
+            .bootstrap-logo {
+                @include logo-padding;
+
+            }
+
+            .wordpress-logo {
+                
+                @include logo-padding;
+
+            }
+
+            
+        }
+
+        .languages-header-container {
+
+            @include mobile-responsive;
+            @include skill-section-header-align;
+
+            .languages-header {
+
+                @include zero-space;
+                @include section-header;
+
+            }
+
+        }
+
+        .language-sub-grid {
+
+            @include header-spacing-correction;
+            @include mobile-responsive;
+            @include skill-box-color;
+
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            height: auto;
+            margin: 0 200px 50px;
+            
+
+            .css3-logo,
+            .html5-logo,
+            .js-logo  {
+                
+                @include logo-padding;
+
+            }
+        }
+
+        .tool-header-container {
+
+            @include mobile-responsive;
+            @include skill-section-header-align;
+
+            .tool-header {
+
+                @include zero-space;
+                @include section-header;
+                
+            }
+
+        }
+
+        .tools-sub-grid {
+            
+            @include mobile-responsive;
+            @include skill-box-color;
+
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            height: auto;
+            margin: 0 200px 100px;
+
+            .apple-logo,
+            .git-logo,
+            .illustrator-logo,
+            .npm-logo,
+            .photoshop-logo,
+            .sass-logo,
+            .terminal-logo,
+            .ubuntu-logo,
+            .windows-logo,
+            .xd-logo {
+                
+                @include logo-padding;
+            }
+        }
+
+    }
+
+    .work-grid {
+
+        
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 600px));
+        height: 100%;
+        justify-content: center;
+        margin: 100px;
+
+        .work-1,
+        .work-2 {
+
+
+            height: 100%;
+            transition-duration: .75s;
+            width: 100%;
+            
+        }
+
+        .work-1:hover,
+        .work-2:hover {
+            
+            cursor: pointer;
+            transform: scale(1.10);
+
+        }
+
+        .work-1-container,
+        .work-2-container {
+
+            @include zero-space;
+
+            border: 1px solid rgba(0, 0, 0, .1);
+            height: 100%;
+            overflow: hidden;
+
+        }
+
+    }
+}
+
+.contact-grid-container {
+
+    @include bg-bar;
+
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    width: 100%;
+
+    .contact-grid {
+
+        display: grid;
+        grid-template-areas:
+            'email github twitter linkedin';
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        margin: 0 100px;
+        padding: 20px 0;
+
+            @media only screen and (max-width: 768px) {
+
+                display: block;
+                margin: 0;
+
+            }
+
+        .github-icon,
+        .linkedin-icon,
+        .email-icon,
+        .twitter-icon {
+            
+            align-self: end;
+            fill: #ffffff;
+            height: auto;
+            justify-self: center;
+            width: 50px;
+
+            @media only screen and (max-width: 768px) {
+                width: 100px;
+            }
+        }
+
+        .email-sub-grid {
+        
+            @include contact-align;
+            @include contact-icon-correction;
+            @include footer-row-hght;
+
+            grid-area: 'email';
+            grid-template-areas:
+                'email-icon-grid'
+                'email-usr-grid';
+
+            .email-icon {
+
+                @include svg-color;
+
+                grid-area: email-icon-grid;
+            }
+
+            .email-addr {
+                
+                @include contact-info-correction;
+                @include footer-txt-color;
+
+                grid-area: email-usr-grid;
+            }
+
+        }
+
+        .github-sub-grid {
+
+            @include contact-align;
+            @include contact-icon-correction;
+            @include footer-row-hght;
+
+            grid-area: 'github';
+            grid-template-areas:
+                'github-icon-grid'
+                'github-usr-grid';
+
+            .github-icon {
+                
+                @include svg-color;
+
+                grid-area: github-icon-grid;
+            }
+
+            .github-usr {
+                @include contact-info-correction;
+                @include footer-txt-color;
+
+                grid-area: github-usr-grid;
+            }
+
+        }
+
+        .linkedin-sub-grid {
+
+            @include contact-align;
+            @include contact-icon-correction;
+            @include footer-row-hght;
+
+
+            grid-area: 'linkedin';
+            grid-template-areas:
+                'linkedin-icon-grid'
+                'linkedin-usr-grid';
+
+            .linkedin-icon {
+                
+                @include svg-color;
+
+                grid-area: linkedin-icon-grid;
+            }
+
+            .linkedin-usr {
+
+                @include contact-info-correction;
+                @include footer-txt-color;
+
+                grid-area: linkedin-usr-grid;
+            }
+        }
+
+        .twitter-sub-grid {
+
+            @include contact-align;
+            @include contact-icon-correction;
+            @include footer-row-hght;
+
+            grid-area: 'twitter';
+            grid-template-areas:
+                'twitter-icon-grid'
+                'twitter-usr-grid';
+
+            .twitter-icon {
+
+                @include svg-color;
+
+                grid-area: twitter-icon-grid;
+            }
+
+            .twitter-usr {
+
+                @include contact-info-correction;
+                @include footer-txt-color;
+
+                grid-area: twitter-usr-grid;
+            }
+        }
+
+    }
+
+}
+
+/* /////////////////////// MODAL STYLING \\\\\\\\\\\\\\\\\\\\\\\ */
+
+    .modal-container {
+        
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+
+        @media only screen and (max-width: 768px) {
+        
+            background-color: rgba(34, 37, 44, 1);
+
+        }
+
+        .close-button {
+
+        background-color: rgba(157, 88, 115, 1);
+        border-radius: 5px;
+        cursor: pointer;
+        float: right;
+        line-height: 1.5rem;
+        margin: 10px 10px 0 0;
+        position: relative;
+        text-align: center;
+        width: 1.5rem;
+        z-index: 3;
+
+        }
+
+            .jkeller-modal {
+                background-color: rgba(255, 255, 255, .9);
+                background-image: url('../imgs/image-assets/work-jkeller/jkeller-modal-bg.jpg');
+            }
+
+            .kinneret-modal {
+                
+                background-color: rgba(255, 255, 255, .8);
+                background-image: url('../imgs/image-assets/kinneret-modal-bg.jpg');
+            }
+
+            .modal-window {
+
+                background-blend-mode: lighten;
+                background-position: center center;
+                background-size: cover;
+                border-radius: 12px;
+                height: 80%;
+                justify-content: center;
+                left: 50%;
+                max-height: 80%;
+                overflow: hidden;
+                padding: 50px 10px;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 60%;
+
+                @media only screen and (max-width: 768px) {
+
+                    height: 100%;
+                    padding: 50px 10px;
+                    width: 100%;
+
+                }
+
+                .content-container {
+
+                    height: 100%;
+                    overflow-x: hidden;
+                    overflow-y: scroll;
+
+                    .desktop-row {
+
+                        display: flex;
+                        justify-content: center;
+                        padding: 0 100px;
+
+                        @media only screen and (max-width: 768px) {
+
+                                padding: 0;
+
+                        }
+
+                        .desktop-img {
+                            
+                            height: 500px;
+
+                            @media only screen and (max-width: 768px) {
+
+                                height: 250px;
+
+                            }
+
+                        }
+                    }
+
+                }
+
+                }
+
+                .implement-row {
+
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    .css3-logo,
+                    .html5-logo,
+                    .js-logo,
+                    .wordpress-logo {
+                        @include work-implement;
+
+                        @media only screen and (max-width: 768px) {
+
+                                height: 50px;
+
+                        }
+                    }
+
+                }
+
+                .work-description {
+
+                    padding: 0 100px;
+
+                    p {
+                        clear: left;
+
+                        @media only screen and (max-width: 768px) {
+
+                            clear: none;
+                            width: 100%;
+
+                        }
+                    }
+
+                    @media only screen and (max-width: 768px) {
+
+                        padding: 0 10px;
+
+                    }
+
+                    .iphone-img {
+                        float: right;
+                        height: 500px;
+                        justify-content: center;
+                        padding: 20px;
+
+                        @media only screen and (max-width: 768px) {
+
+                                float: none;
+                                max-height: 500px;
+                                padding: 20%;
+                        }
+
+                    }
+
+                    .magazine-spread-img {
+                        float: right;
+                        height: 500px;
+                        justify-content: center;
+                        padding: 20px;
+
+                        @media only screen and (max-width: 768px) {
+
+                                float: none;
+                                max-height: 500px;
+                                padding: 0;
+                        }
+
+                    }
+
+                    .photo-sample-img {
+
+                        margin-bottom: 10px;
+                        width: 100%;
+
+                    }
+
+                }
+
+                
+            }
