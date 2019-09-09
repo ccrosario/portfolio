@@ -1,0 +1,25 @@
+.header {
+
+    background-image: linear-gradient($color-white, $magenta_30);
+
+    &__title {
+        font-size: 8rem;
+        margin: 0;
+        padding-top: 4rem;
+        text-align: center;
+    }
+
+    &__subtitle {
+        font-size: 3rem;
+        margin-bottom: 6rem;
+        text-align: center;
+    }
+
+    &__svg-wrapper {
+        .header__svg {
+            @include absCenter;
+
+            width: 80%;
+        }
+    }
+}
