@@ -4,13 +4,17 @@
     color: $magenta_80;
     letter-spacing: 4px;
     padding-bottom: 8rem;
+    position: relative;
     text-align: center;
     text-shadow: 1px 1px 2px $magenta_70;
 
     &__social-icons {
+        background-color: $magenta_30;
+        box-shadow: 2px 6px;
+            -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 10% 100%);
+        clip-path: polygon(20% 0, 100% 0, 100% 100%, 10% 100%);
         display: flex;
         float: right;
-        justify-content: center;
         list-style: none;
 
         & > li {
@@ -25,15 +29,20 @@
             }           
         }
 
+        &__github,
+        &__twitter {
+            transform: translateY(4px);
+        }
+
         &__linkedin {
-            transform: translateY(-3px);
+            transform: translateY(1px);
         }
     }
 
     &__title {
         font-size: 8rem;
         margin: 0;
-        padding-top: 4rem;
+        margin-top: 1rem;
         transform: translateX(8rem);
     }
 
@@ -45,10 +54,11 @@
 
     &__svg-wrapper {
 
-        .header__svg {
-            @include absCenter;
+        box-shadow: 0px 50px 60px -60px $magenta_100;
 
-            width: 50%;
+        .header__svg {
+            transform: translateY(1rem);
+            width: 100%;
         }
 
     }

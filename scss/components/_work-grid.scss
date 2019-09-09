@@ -7,31 +7,25 @@
     height: 100%;
     justify-content: center;
 
-    .work-1,
-    .work-2 {
-
-
-        height: 100%;
-        transition-duration: .5s;
-        width: 100%;
-        
-    }
-
-    .work-1:hover,
-    .work-2:hover {
-        
-        cursor: pointer;
-        transform: scale(1.10);
-
-    }
-
-    .work-1-container,
-    .work-2-container {
+    &__container-1,
+    &__container-2 {
 
         border: 1px solid rgba(0, 0, 0, .1);
-        height: 100%;
+        border-radius: 5px;
         overflow: hidden;
 
+        &__img {
+            height: 100%;
+            transition-duration: .5s;
+            width: 100%;
+
+            &:hover,
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.10);
+            }
+
+    }
     }
 
 }
