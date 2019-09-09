@@ -9,11 +9,13 @@
     text-shadow: 1px 1px 2px $magenta_70;
 
     &__social-icons {
+
         background-color: $magenta_30;
         box-shadow: 2px 6px;
             -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 10% 100%);
         clip-path: polygon(20% 0, 100% 0, 100% 100%, 10% 100%);
         display: flex;
+        filter: drop-shadow(0 10px 30px $magenta_40);
         float: right;
         list-style: none;
 
