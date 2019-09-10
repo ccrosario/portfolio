@@ -1,0 +1,15 @@
+@mixin border-edge {
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+@mixin main-text-edge {
+    -webkit-text-fill-color:$indigo_80; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, .1);
+}
+
+@mixin sub-text-edge {
+    -webkit-text-fill-color:$indigo_60; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, .05);
+}

@@ -5,35 +5,47 @@
 
 .work-grid {
 
-    background-image: linear-gradient($magenta_30, $color-white);
+    background-image: linear-gradient($indigo_30, $color-white);
     display: grid;
     grid-gap: 6rem;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 600px));
-    height: 100%; //leave this height @ 100%, ¹
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 60rem));
+    height: 100%; //leave this height @ 100% ¹
     justify-content: center;
+    margin-bottom: 10rem;
 
     &__container-1,
-    &__container-2 {
+    &__container-2,
+    &__container-3,
+    &__container-4 {
 
-        border: 1px solid rgba(0, 0, 0, .1);
+        @include border-edge;
+
         border-radius: 5px;
-        height: 100%; //leave this height @ 100%, ¹
+        height: 100%; //leave this height @ 100% ¹
         filter: drop-shadow(0 2px 4px $color-dark-grey);
 
         &__img-1,
-        &__img-2 {
+        &__img-2,
+        &__img-3 {
             border-radius: 5px;
-            height: 100%; //leave this height @ 100%, ¹ 
-            transition-duration: .5s;
+            height: 100%; //leave this height @ 100% ¹ 
+            transition-duration: .25s;
             width: 100%;
 
             &:hover,
             &:hover {
                 cursor: pointer;
-                transform: scale(1.10);
+                transform: scale(1.01);
             }
+        }
 
+        &__empty {
+            background-color: $indigo_20;
+            border-radius: 5px;
+            height: 355px;
+            outline: 2px solid rgba(192, 192, 252, .25);
+            outline-offset: -20px;
+            width: 598px;
         }
     }
-
 }

@@ -1,23 +1,22 @@
 .header {
-
-    background-image: linear-gradient($color-white, $magenta_30);
-    color: $magenta_80;
+    
+    background-image: linear-gradient($color-white, $indigo_30);
     letter-spacing: 4px;
     padding-bottom: 8rem;
     position: relative;
     text-align: center;
-    text-shadow: 1px 1px 2px $magenta_70;
 
     &__social-icons {
 
-        background-color: $magenta_30;
+        background-color: $indigo_30;
         box-shadow: 2px 6px;
             -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 10% 100%);
         clip-path: polygon(20% 0, 100% 0, 100% 100%, 10% 100%);
         display: flex;
-        filter: drop-shadow(0 10px 30px $magenta_40);
+        filter: drop-shadow(0 10px 30px $indigo_40);
         float: right;
         list-style: none;
+        transform: translateY(-5rem);
 
         & > li {
             margin-right: 2rem;
@@ -26,7 +25,7 @@
             & > a {
 
                 & > svg {
-                    fill: $magenta_90;
+                    fill: $indigo_90;
                 }
             }           
         }
@@ -42,21 +41,26 @@
     }
 
     &__title {
+        @include main-text-edge;
+
         font-size: 8rem;
         margin: 0;
-        margin-top: 1rem;
+        margin-top: 6rem;
         transform: translateX(8rem);
     }
 
     &__subtitle {
+        @include sub-text-edge;
+
         font-size: 3rem;
         margin-top: 0;
-        margin-bottom: 6rem;
+        margin-bottom: 0;
+        transform: translate(16rem, -4rem);
     }
 
     &__svg-wrapper {
 
-        box-shadow: 0px 50px 60px -60px $magenta_100;
+        box-shadow: 0px 50px 60px -60px $indigo_100;
 
         .header__svg {
             transform: translateY(1rem);
