@@ -31,7 +31,10 @@ html {
       margin-right: 2rem;
       width: 2rem; }
       .header__social-icons > li > a > svg {
-        fill: #28288a; }
+        fill: #28288a;
+        transition-duration: .3s; }
+        .header__social-icons > li > a > svg:hover {
+          scale: 1.1; }
     .header__social-icons__github, .header__social-icons__twitter {
       transform: translateY(4px); }
     .header__social-icons__linkedin {
@@ -76,15 +79,33 @@ html {
     .work-grid__container-1__img-1, .work-grid__container-1__img-2, .work-grid__container-1__img-3, .work-grid__container-2__img-1, .work-grid__container-2__img-2, .work-grid__container-2__img-3, .work-grid__container-3__img-1, .work-grid__container-3__img-2, .work-grid__container-3__img-3, .work-grid__container-4__img-1, .work-grid__container-4__img-2, .work-grid__container-4__img-3 {
       border-radius: 5px;
       height: 100%;
-      transition-duration: .25s;
+      transition-duration: .5s;
       width: 100%; }
       .work-grid__container-1__img-1:hover, .work-grid__container-1__img-1:hover, .work-grid__container-1__img-2:hover, .work-grid__container-1__img-2:hover, .work-grid__container-1__img-3:hover, .work-grid__container-1__img-3:hover, .work-grid__container-2__img-1:hover, .work-grid__container-2__img-1:hover, .work-grid__container-2__img-2:hover, .work-grid__container-2__img-2:hover, .work-grid__container-2__img-3:hover, .work-grid__container-2__img-3:hover, .work-grid__container-3__img-1:hover, .work-grid__container-3__img-1:hover, .work-grid__container-3__img-2:hover, .work-grid__container-3__img-2:hover, .work-grid__container-3__img-3:hover, .work-grid__container-3__img-3:hover, .work-grid__container-4__img-1:hover, .work-grid__container-4__img-1:hover, .work-grid__container-4__img-2:hover, .work-grid__container-4__img-2:hover, .work-grid__container-4__img-3:hover, .work-grid__container-4__img-3:hover {
         cursor: pointer;
         transform: scale(1.01); }
-    .work-grid__container-1__empty, .work-grid__container-2__empty, .work-grid__container-3__empty, .work-grid__container-4__empty {
+    .work-grid__container-1__skill-box, .work-grid__container-2__skill-box, .work-grid__container-3__skill-box, .work-grid__container-4__skill-box {
       background-color: #dedefc;
       border-radius: 5px;
       height: 355px;
       outline: 2px solid rgba(192, 192, 252, 0.25);
       outline-offset: -20px;
       width: 598px; }
+      .work-grid__container-1__skill-box__skill-lists, .work-grid__container-2__skill-box__skill-lists, .work-grid__container-3__skill-box__skill-lists, .work-grid__container-4__skill-box__skill-lists {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        list-style: none;
+        font-size: 1.5rem;
+        padding-left: 8rem;
+        width: 100%; }
+        .work-grid__container-1__skill-box__skill-lists > div, .work-grid__container-2__skill-box__skill-lists > div, .work-grid__container-3__skill-box__skill-lists > div, .work-grid__container-4__skill-box__skill-lists > div {
+          display: inline-block;
+          margin-right: -4px;
+          width: 33.333333333%; }
+          .work-grid__container-1__skill-box__skill-lists > div > li > h3 > svg, .work-grid__container-2__skill-box__skill-lists > div > li > h3 > svg, .work-grid__container-3__skill-box__skill-lists > div > li > h3 > svg, .work-grid__container-4__skill-box__skill-lists > div > li > h3 > svg {
+            margin-right: 1rem;
+            transform: translateY(4px);
+            width: 2rem; }

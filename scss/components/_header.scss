@@ -26,7 +26,14 @@
 
                 & > svg {
                     fill: $indigo_90;
+                    transition-duration: .3s;
+
+                    &:hover {
+                        scale: (1.1);
+                    }
                 }
+
+                
             }           
         }
 
