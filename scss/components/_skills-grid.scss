@@ -1,0 +1,53 @@
+.skills-grid {
+
+    background-color: $indigo_20;
+        -webkit-clip-path: polygon(0 5%, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 5%, 100% 0, 100% 90%, 0 100%);
+    padding: 4rem 14rem 1rem 10%;
+    position: relative;
+    z-index: 2;
+
+    &__lists-wrapper {
+
+        display: inline-block;
+        list-style: none;
+        font-size: 1.75rem;
+        padding: 1rem 4rem 0 8rem;
+        width: 100%;
+        left: 50%;
+
+        & > div {
+            
+            display: inline-block;
+            margin-right: -4px;
+            vertical-align: text-top;
+            width: 33.333333333%;
+
+            & > li > h3 {
+                margin-top: 0;
+
+                & > svg {
+                        margin-right: 1rem;
+                        transform: translateY(4px);
+                        width: 2.5rem;
+                }
+
+                .small-icon-fix {
+                    width: 3rem;
+                }
+                .icon-spacing-fix {
+                    transform: translate(-3px, -1px);
+                }
+
+            } 
+        }
+    }
+}
+
+.skills-grid-backing {
+    @include drop-shadow;
+
+    background-color: $indigo-60;
+    height: 440px;
+    transform: translateY(-454px);
+}

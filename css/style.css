@@ -84,28 +84,39 @@ html {
       .work-grid__container-1__img-1:hover, .work-grid__container-1__img-1:hover, .work-grid__container-1__img-2:hover, .work-grid__container-1__img-2:hover, .work-grid__container-1__img-3:hover, .work-grid__container-1__img-3:hover, .work-grid__container-2__img-1:hover, .work-grid__container-2__img-1:hover, .work-grid__container-2__img-2:hover, .work-grid__container-2__img-2:hover, .work-grid__container-2__img-3:hover, .work-grid__container-2__img-3:hover, .work-grid__container-3__img-1:hover, .work-grid__container-3__img-1:hover, .work-grid__container-3__img-2:hover, .work-grid__container-3__img-2:hover, .work-grid__container-3__img-3:hover, .work-grid__container-3__img-3:hover, .work-grid__container-4__img-1:hover, .work-grid__container-4__img-1:hover, .work-grid__container-4__img-2:hover, .work-grid__container-4__img-2:hover, .work-grid__container-4__img-3:hover, .work-grid__container-4__img-3:hover {
         cursor: pointer;
         transform: scale(1.01); }
-    .work-grid__container-1__skill-box, .work-grid__container-2__skill-box, .work-grid__container-3__skill-box, .work-grid__container-4__skill-box {
-      background-color: #dedefc;
-      border-radius: 5px;
-      height: 355px;
-      outline: 2px solid rgba(192, 192, 252, 0.25);
-      outline-offset: -20px;
-      width: 598px; }
-      .work-grid__container-1__skill-box__skill-lists, .work-grid__container-2__skill-box__skill-lists, .work-grid__container-3__skill-box__skill-lists, .work-grid__container-4__skill-box__skill-lists {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        display: inline-block;
-        list-style: none;
-        font-size: 1.5rem;
-        padding-left: 8rem;
-        width: 100%; }
-        .work-grid__container-1__skill-box__skill-lists > div, .work-grid__container-2__skill-box__skill-lists > div, .work-grid__container-3__skill-box__skill-lists > div, .work-grid__container-4__skill-box__skill-lists > div {
-          display: inline-block;
-          margin-right: -4px;
-          width: 33.333333333%; }
-          .work-grid__container-1__skill-box__skill-lists > div > li > h3 > svg, .work-grid__container-2__skill-box__skill-lists > div > li > h3 > svg, .work-grid__container-3__skill-box__skill-lists > div > li > h3 > svg, .work-grid__container-4__skill-box__skill-lists > div > li > h3 > svg {
-            margin-right: 1rem;
-            transform: translateY(4px);
-            width: 2rem; }
+
+.skills-grid {
+  background-color: #dedefc;
+  -webkit-clip-path: polygon(0 5%, 100% 0, 100% 90%, 0 100%);
+  clip-path: polygon(0 5%, 100% 0, 100% 90%, 0 100%);
+  padding: 4rem 14rem 1rem 10%;
+  position: relative;
+  z-index: 2; }
+  .skills-grid__lists-wrapper {
+    display: inline-block;
+    list-style: none;
+    font-size: 1.75rem;
+    padding: 1rem 4rem 0 8rem;
+    width: 100%;
+    left: 50%; }
+    .skills-grid__lists-wrapper > div {
+      display: inline-block;
+      margin-right: -4px;
+      vertical-align: text-top;
+      width: 33.333333333%; }
+      .skills-grid__lists-wrapper > div > li > h3 {
+        margin-top: 0; }
+        .skills-grid__lists-wrapper > div > li > h3 > svg {
+          margin-right: 1rem;
+          transform: translateY(4px);
+          width: 2.5rem; }
+        .skills-grid__lists-wrapper > div > li > h3 .small-icon-fix {
+          width: 3rem; }
+        .skills-grid__lists-wrapper > div > li > h3 .icon-spacing-fix {
+          transform: translate(-3px, -1px); }
+
+.skills-grid-backing {
+  filter: drop-shadow(0 2px 4px #454545);
+  background-color: #6565e6;
+  height: 440px;
+  transform: translateY(-454px); }
