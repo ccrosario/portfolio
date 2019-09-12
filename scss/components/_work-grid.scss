@@ -7,12 +7,12 @@
 
     background-image: linear-gradient($indigo_30, $color-white);
     display: grid;
-    grid-gap: 6rem;
+    grid-gap: 10rem;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 60rem));
     height: 100%; //leave this height @ 100% ¹
     justify-content: center;
-    margin-bottom: 20rem;
-    padding-top: 20rem;
+    margin-bottom: 15rem;
+    padding-top: 10rem;
 
     &__container-1,
     &__container-2,

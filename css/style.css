@@ -1,12 +1,11 @@
 html {
-  font-size: 62.5%;
   margin: 0px;
   padding: 0px; }
   html body {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
     /* font-size: 16px;*/
-    font-weight: 100;
+    font-weight: 200;
     line-height: 1.7;
     margin: 0px;
     padding: 0px; }
@@ -66,12 +65,12 @@ html {
 .work-grid {
   background-image: linear-gradient(#c0c0fc, white);
   display: grid;
-  grid-gap: 6rem;
+  grid-gap: 10rem;
   grid-template-columns: repeat(auto-fit, minmax(40rem, 60rem));
   height: 100%;
   justify-content: center;
-  margin-bottom: 20rem;
-  padding-top: 20rem; }
+  margin-bottom: 15rem;
+  padding-top: 10rem; }
   .work-grid__container-1, .work-grid__container-2, .work-grid__container-3, .work-grid__container-4 {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -85,17 +84,6 @@ html {
       .work-grid__container-1__img-1:hover, .work-grid__container-1__img-1:hover, .work-grid__container-1__img-2:hover, .work-grid__container-1__img-2:hover, .work-grid__container-1__img-3:hover, .work-grid__container-1__img-3:hover, .work-grid__container-2__img-1:hover, .work-grid__container-2__img-1:hover, .work-grid__container-2__img-2:hover, .work-grid__container-2__img-2:hover, .work-grid__container-2__img-3:hover, .work-grid__container-2__img-3:hover, .work-grid__container-3__img-1:hover, .work-grid__container-3__img-1:hover, .work-grid__container-3__img-2:hover, .work-grid__container-3__img-2:hover, .work-grid__container-3__img-3:hover, .work-grid__container-3__img-3:hover, .work-grid__container-4__img-1:hover, .work-grid__container-4__img-1:hover, .work-grid__container-4__img-2:hover, .work-grid__container-4__img-2:hover, .work-grid__container-4__img-3:hover, .work-grid__container-4__img-3:hover {
         cursor: pointer;
         transform: scale(1.01); }
-
-.skills-title {
-  color: #3737b3;
-  display: flex;
-  font-size: 8rem;
-  font-weight: 400;
-  justify-content: center;
-  margin-bottom: 0;
-  position: relative;
-  text-align: center;
-  z-index: 3; }
 
 .skills-grid {
   background-image: linear-gradient(45deg, #dedefc, #f3f3fc);
@@ -139,5 +127,28 @@ h1 {
   letter-spacing: 1rem; }
 
 h3 {
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: .25rem; }
+
+.section-title {
+  color: #3737b3;
+  display: flex;
+  font-size: 8rem;
+  font-weight: 500;
+  justify-content: center;
+  margin-bottom: 0;
+  position: relative;
+  text-align: center;
+  z-index: 3; }
+
+html {
+  font-size: 62.5%;
+  margin: 0px;
+  padding: 0px; }
+  html body {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    margin: 0px;
+    padding: 0px; }
