@@ -14,10 +14,7 @@
     margin-bottom: 15rem;
     padding-top: 10rem;
 
-    &__container-1,
-    &__container-2,
-    &__container-3,
-    &__container-4 {
+    &__container {
 
         @include border-edge;
 
@@ -25,19 +22,31 @@
         height: 100%; //leave this height @ 100% ¹
         filter: drop-shadow(0 2px 4px $color-dark-grey);
 
-        &__img-1,
-        &__img-2,
-        &__img-3 {
+        &__img,
+        &__git {
             border-radius: 5px;
-            height: 100%; //leave this height @ 100% ¹ 
+            height: 100%; //leave this height @ 100% ¹
             transition-duration: .5s;
             width: 100%;
-
+        
             &:hover,
             &:hover {
                 cursor: pointer;
                 transform: scale(1.01);
             }
+
+            &__text {
+                display: inline;
+                font-size: 36px;
+                margin: 0;
+                position: relative;
+                text-align: center;
+                vertical-align: middle;
+            }
+        }
+
+        &__git {
+            background-color: $indigo_30;
         }
     }
 }

@@ -71,19 +71,28 @@ html {
   justify-content: center;
   margin-bottom: 15rem;
   padding-top: 10rem; }
-  .work-grid__container-1, .work-grid__container-2, .work-grid__container-3, .work-grid__container-4 {
+  .work-grid__container {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     height: 100%;
     filter: drop-shadow(0 2px 4px #454545); }
-    .work-grid__container-1__img-1, .work-grid__container-1__img-2, .work-grid__container-1__img-3, .work-grid__container-2__img-1, .work-grid__container-2__img-2, .work-grid__container-2__img-3, .work-grid__container-3__img-1, .work-grid__container-3__img-2, .work-grid__container-3__img-3, .work-grid__container-4__img-1, .work-grid__container-4__img-2, .work-grid__container-4__img-3 {
+    .work-grid__container__img, .work-grid__container__git {
       border-radius: 5px;
       height: 100%;
       transition-duration: .5s;
       width: 100%; }
-      .work-grid__container-1__img-1:hover, .work-grid__container-1__img-1:hover, .work-grid__container-1__img-2:hover, .work-grid__container-1__img-2:hover, .work-grid__container-1__img-3:hover, .work-grid__container-1__img-3:hover, .work-grid__container-2__img-1:hover, .work-grid__container-2__img-1:hover, .work-grid__container-2__img-2:hover, .work-grid__container-2__img-2:hover, .work-grid__container-2__img-3:hover, .work-grid__container-2__img-3:hover, .work-grid__container-3__img-1:hover, .work-grid__container-3__img-1:hover, .work-grid__container-3__img-2:hover, .work-grid__container-3__img-2:hover, .work-grid__container-3__img-3:hover, .work-grid__container-3__img-3:hover, .work-grid__container-4__img-1:hover, .work-grid__container-4__img-1:hover, .work-grid__container-4__img-2:hover, .work-grid__container-4__img-2:hover, .work-grid__container-4__img-3:hover, .work-grid__container-4__img-3:hover {
+      .work-grid__container__img:hover, .work-grid__container__img:hover, .work-grid__container__git:hover, .work-grid__container__git:hover {
         cursor: pointer;
         transform: scale(1.01); }
+      .work-grid__container__img__text, .work-grid__container__git__text {
+        display: inline;
+        font-size: 36px;
+        margin: 0;
+        position: relative;
+        text-align: center;
+        vertical-align: middle; }
+    .work-grid__container__git {
+      background-color: #c0c0fc; }
 
 .skills-grid {
   background-image: linear-gradient(45deg, #dedefc, #f3f3fc);
