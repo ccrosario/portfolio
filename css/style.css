@@ -114,7 +114,7 @@ html {
       transform: translateX(25%);
       vertical-align: text-top; }
       .skills-grid__lists-wrapper > div > li > h3 {
-        margin-right: 30rem;
+        margin-right: 20rem;
         margin-top: 0;
         text-transform: uppercase; }
         .skills-grid__lists-wrapper > div > li > h3 > svg {
