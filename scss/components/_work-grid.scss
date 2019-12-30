@@ -24,9 +24,13 @@
 
         &__img,
         &__git {
+            align-items: center;
             border-radius: 5px;
+            display: flex;
             height: 100%; //leave this height @ 100% ¹
+            text-align: center;
             transition-duration: .5s;
+            vertical-align: middle;
             width: 100%;
         
             &:hover,
@@ -35,13 +39,16 @@
                 transform: scale(1.01);
             }
 
+            &__svg {
+                max-height: 100%;
+
+                &__paths {
+                    max-height: 100%;
+                }
+            }
             &__text {
-                display: inline;
                 font-size: 36px;
                 margin: 0;
-                position: relative;
-                text-align: center;
-                vertical-align: middle;
             }
         }
 

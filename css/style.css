@@ -77,20 +77,24 @@ html {
     height: 100%;
     filter: drop-shadow(0 2px 4px #454545); }
     .work-grid__container__img, .work-grid__container__git {
+      align-items: center;
       border-radius: 5px;
+      display: flex;
       height: 100%;
+      text-align: center;
       transition-duration: .5s;
+      vertical-align: middle;
       width: 100%; }
       .work-grid__container__img:hover, .work-grid__container__img:hover, .work-grid__container__git:hover, .work-grid__container__git:hover {
         cursor: pointer;
         transform: scale(1.01); }
+      .work-grid__container__img__svg, .work-grid__container__git__svg {
+        max-height: 100%; }
+        .work-grid__container__img__svg__paths, .work-grid__container__git__svg__paths {
+          max-height: 100%; }
       .work-grid__container__img__text, .work-grid__container__git__text {
-        display: inline;
         font-size: 36px;
-        margin: 0;
-        position: relative;
-        text-align: center;
-        vertical-align: middle; }
+        margin: 0; }
     .work-grid__container__git {
       background-color: #c0c0fc; }
 
